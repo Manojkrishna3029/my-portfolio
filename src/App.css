@@ -1,0 +1,518 @@
+:root {
+  --primary-color: #007bff;
+  --text-color: #222;
+  --bg-gradient: linear-gradient(180deg, #f8f9fb, #e9ecef);
+  --card-bg: #ffffff;
+  --border-color: #ddd;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+section {
+  padding: 70px 10%;
+  text-align: center;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #f9f9ff, #eef3ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Hero Inner ===== */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ===== Hero Left ===== */
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.eyebrow {
+  font-size: 1rem;
+  color: #0078ff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.hero-title {
+  font-size: 1.3rem;
+  color: #555;
+  margin: 15px 0 30px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary,
+.btn-outline {
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #0078ff;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 2px solid #0078ff;
+  color: #0078ff;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 120, 255, 0.2);
+}
+
+/* ===== Hero Right (Image) ===== */
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero {
+    padding: 80px 5%;
+    text-align: center;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .avatar {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+/* ===== Section Titles ===== */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ===== Skills ===== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* ===== Projects ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.status {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.status.live { background-color: #28a745; }
+.status.coming-soon { background-color: #ffc107; }
+.status.in-progress { background-color: #17a2b8; }
+
+/* ===== Footer ===== */
+.footer {
+  background: #fff;
+  padding: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content h2 { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 50px 6%; }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content h2 { font-size: 1rem; }
+  .skill-card { font-size: 0.95rem; }
+  .project-card { padding: 18px; }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 1.8rem; }
+  .btn-primary, .btn-outline {
+    display: block;
+    width: 100%;
+    margin: 8px auto;
+  }
+}
+/* === Navbar === */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Logo === */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #0078ff;
+}
+
+/* === Nav Links === */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin-left: 28px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-right a:hover {
+  color: #0078ff;
+}
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #0078ff;
+  transition: width 0.3s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* === Contact Button === */
+.btn-outline {
+  padding: 8px 18px;
+  border: 2px solid #0078ff;
+  border-radius: 20px;
+  color: #0078ff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #0078ff;
+  color: #fff;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav-right {
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: none;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  .nav-right a {
+    margin: 12px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* === Animate Hamburger === */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+/* ===== Contact Section ===== */
+.contact {
+  background: linear-gradient(135deg, #eef3ff, #f9f9ff);
+  padding: 100px 10%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  color: #0078ff;
+  margin-bottom: 2rem;
+}
+
+/* ===== Contact Grid ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+/* ===== Contact Card (Glass Style) ===== */
+.contact-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 120, 255, 0.15);
+}
+
+.contact-card h4 {
+  color: #0078ff;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* ===== Contact Info ===== */
+.contact-card p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+.contact-card a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Contact Form ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.2);
+}
+
+/* ===== Button ===== */
+.btn-primary {
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 120, 255, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .contact {
+    padding: 70px 7%;
+  }
+
+  .contact h2 {
+    font-size: 1.9rem;
+  }
+
+  .contact-card {
+    text-align: center;
+  }
+
+  .contact-card h4 {
+    font-size: 1.2rem;
+  }
+}
