@@ -1,5 +1,6 @@
 import React from "react";
 import shenaImge from "../assets/shena.jpg";
+import resumePDF from "../assets/resume.pdf";
 
 const Hero = () => {
   return (
@@ -18,8 +19,11 @@ const Hero = () => {
 
           <div className="hero-ctas">
             <a href="#projects" className="btn-primary">View Projects</a>
-            <a href="/resume.pdf" className="btn-outline" download>
+            <a href={resumePDF} className="btn-outline" download>
               Download Resume
+            </a>
+            <a href={resumePDF} target="_blank" className="btn-outline">
+              View Resume
             </a>
           </div>
         </div>

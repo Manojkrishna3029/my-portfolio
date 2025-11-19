@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-left">
-        <h1 className="logo">KManoj</h1>
+        <h1 className="logo">K ManojKrishna</h1>
       </div>
 
       <nav className={`nav-right ${menuOpen ? "open" : ""}`}>

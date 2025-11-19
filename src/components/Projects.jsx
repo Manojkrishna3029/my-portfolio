@@ -32,7 +32,7 @@ const Projects = () => {
       description:
         "An AI/ML project that detects emotions from speech and recommends songs or games to improve the user's mood.",
       status: "Completed",
-      link: "#",
+      link: "https://emotivoice-finalsem.streamlit.app/",
     },
     {
       name: "Modern Encryption & Decryption Algorithm",
