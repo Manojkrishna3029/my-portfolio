@@ -1,5 +1,5 @@
 import React from "react";
-import shenaImge from "../assets/shena.jpg";
+import shenaImge from "../assets/shena.jpeg";
 import resumePDF from "../assets/resume.pdf";
 
 const Hero = () => {
