@@ -1,6 +1,6 @@
 import React from "react";
 import shenaImge from "../assets/shena.jpeg";
-import resumePDF from "../assets/resume.pdf";
+import resumePDF from "../assets/Resume.pdf";
 
 const Hero = () => {
   return (
@@ -11,10 +11,10 @@ const Hero = () => {
           <h2 className="eyebrow">Hi, I'm</h2>
           <h1 className="hero-name">Kandregula Manoj Krishna</h1>
           <p className="hero-title">
-            Aspiring Web Developer | Frontend Enthusiast
+            Associate at WTS | Aspiring Full-Stack Developer
           </p>
           <p className="hero-objective">
-            Passionate web developer with a knack for creating interactive, user-friendly web experiences. Eager to innovate and continuously learn new technologies.
+            Associate at WTS specializing in Image Quality Control (QC) and dataset validation. An aspiring Full-Stack Developer passionate about building modern, responsive web applications and continuously improving my skills in web technologies.
           </p>
 
           <div className="hero-ctas">
